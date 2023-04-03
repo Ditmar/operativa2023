@@ -29,6 +29,8 @@ export class Prim {
     }
     public prim() {
         //paso 1
+        const result = new Vertex(this.initVertex.getLabel())
+
         this.visited.push(this.initVertex);
         this.unvisited = this.removeItem(this.initVertex);
         this.print();
@@ -39,7 +41,11 @@ export class Prim {
             this.visited.push(vertex);
             this.unvisited = this.removeItem(vertex);
             this.print();
+            //result.addNeighbor(vertex, minEdge.getWeight(), true);
         }
+    }
+    public getTree() {
+        return this.resultTree;
     }
     private removeItem(vertex: Vertex) {
         return this.unvisited.filter(item => item.getLabel() !== vertex.getLabel());

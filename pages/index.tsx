@@ -24,6 +24,7 @@ export default function Home() {
   v4.addNeighbor(v6, 3);
   v4.addNeighbor(v5, 1);
   v5.addNeighbor(v6, 2);
+  console.log(v1);
   // v1.addNeighbor(v2, 2);
   // v1.addNeighbor(v3, 4);
   // v1.addNeighbor(v4, 1);
